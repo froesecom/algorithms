@@ -21,6 +21,8 @@ end
 
 `iex -S mix` to start an interactive session
 
+`mix test` to run tests
+
 Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
 and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
 be found at <https://hexdocs.pm/algorithms>.
