@@ -1,4 +1,6 @@
 defmodule Algorithms.Sort do
+  alias __MODULE__
+
   @moduledoc """
   Sorting algorithms
   """
@@ -12,7 +14,12 @@ defmodule Algorithms.Sort do
       [1,3,4]
 
   """
+  def quick_sort(array) when length(array) <= 1, do: array
+
   def quick_sort(array) do
-    array
+    [pivot | tail] = array
+    left = Enum.filter(tail, fn n -> n <= pivot end)
+    right = Enum.filter(tail, fn n -> n > pivot end)
+    Sort.quick_sort(left) ++ [pivot] ++ Sort.quick_sort(right)
   end
 end
